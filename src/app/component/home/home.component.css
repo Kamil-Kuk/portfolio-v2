@@ -1,0 +1,43 @@
+@media (min-width: 768px) {
+  .my-photo{
+    max-width: 27rem;
+    height: auto;
+    margin-top: 7rem;
+  }
+}
+
+@media (min-width: 360px) {
+  .my-photo{
+    max-width: 20rem;
+    height: auto;
+  }
+}
+
+@media (max-width: 359px) {
+  .my-photo {
+    max-width: 9rem;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .my-gird{
+    margin-top: 7rem;
+    margin-left: 9rem;
+    padding: 0;
+  }
+}
+
+@media (min-width: 360px) {
+  .my-gird{
+    margin-top: 6rem;
+    padding: 0;
+  }
+}
+
+@media (max-width: 359px) {
+  .my-gird {
+    margin-top: 2rem;
+    padding: 0;
+  }
+}
