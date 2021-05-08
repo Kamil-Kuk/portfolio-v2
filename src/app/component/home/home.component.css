@@ -1,43 +1,183 @@
-@media (min-width: 768px) {
-  .my-photo{
-    max-width: 27rem;
-    height: auto;
-    margin-top: 7rem;
-  }
+
+.my-photo {
+  max-width: 27rem;
+  height: auto;
+  margin-top: 7rem;
 }
 
-@media (min-width: 360px) {
-  .my-photo{
+
+
+@media (max-width: 767px) {
+  .my-photo {
     max-width: 20rem;
     height: auto;
+    margin-top: 6rem;
   }
 }
 
-@media (max-width: 359px) {
+@media (max-width: 360px) {
   .my-photo {
     max-width: 9rem;
     height: auto;
-  }
-}
-
-@media (min-width: 768px) {
-  .my-gird{
-    margin-top: 7rem;
-    margin-left: 9rem;
-    padding: 0;
-  }
-}
-
-@media (min-width: 360px) {
-  .my-gird{
-    margin-top: 6rem;
-    padding: 0;
-  }
-}
-
-@media (max-width: 359px) {
-  .my-gird {
     margin-top: 2rem;
-    padding: 0;
   }
 }
+
+  .lead-header {
+    font-family: Helvetica;
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 0.95;
+    letter-spacing: -0.3rem;
+    color: #151618;
+  }
+
+
+@media (max-width: 767px) {
+  .lead-header {
+    font-size: 2.5rem;
+    line-height: 0.95;
+    letter-spacing: -0.2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .lead-header {
+    font-size: 2rem;
+    line-height: 0.95;
+    letter-spacing: -0.1rem;
+  }
+}
+
+/*.lead-header.strong {*/
+/*  color: #ffffff;*/
+/*  z-index: 1;*/
+/*}*/
+
+.lead-header-outline {
+  background-color: #0d0e0f;
+  z-index: 0;
+  /*max-height: 16px!important;*/
+}
+
+.bg-black{
+  background-color: black;
+  color: white;
+}
+
+
+.lead-button{
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 7px;
+  font-size: 18px;
+  font-family: Helvetica;
+}
+
+@media(max-width: 767px){
+  .lead-button{
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+    border-radius: 7px;
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 360px){
+  .lead-button{
+    margin-top: 1rem;
+    padding: 0.7rem 1rem 0.7rem 1rem;
+    border-radius: 7px;
+    font-size: 16px;
+  }
+}
+
+.lead-text{
+  color: rgba(21, 22, 24, 0.7);
+  font-size: 16px;
+  font-weight: 300;
+  margin: 8px 0 24px;
+}
+
+@media(max-width: 767px) {
+  .lead-text {
+    color: rgba(21, 22, 24, 0.7);
+    font-size: 14px;
+    font-weight: 300;
+    margin: 8px 0 24px;
+  }
+}
+
+.image-position{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+  .sticker-top {
+    transform: scaleX(-1);
+    position: absolute;
+    top: 5rem;
+    left: 19rem;
+  }
+
+
+
+@media (max-width: 767px) {
+  .sticker-top {
+    transform: scaleX(-1);
+    position: absolute;
+    top: 5rem;
+    left: 14rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .sticker-top {
+    display: none;
+  }
+}
+
+.sticker-bottom{
+  transform: scaleX(-1);
+  position: absolute;
+  top: 44rem;
+  left: -8rem;
+}
+
+@media (max-width: 767px) {
+  .sticker-bottom {
+    transform: scaleX(-1);
+    position: absolute;
+    top: 32rem;
+    left: -8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .sticker-bottom {
+    display: none;
+  }
+}
+
+/*@media (max-width: 767px) {*/
+/*  .leader-position{*/
+/*    position: absolute;*/
+/*    top: 10rem;*/
+/*    left: 18rem;*/
+/*  }*/
+/*}*/
+
+/*@media (max-width: 360px) {*/
+/*  .leader-position{*/
+/*    order: 2;*/
+/*    position: relative;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*  }*/
+/*}*/
+
+
+  .my-pill{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin: 0.5rem;
+  }
