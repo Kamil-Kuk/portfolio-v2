@@ -35,6 +35,7 @@
 
 @media (max-width: 767px) {
   .lead-header {
+    font-family: Helvetica;
     font-size: 2.5rem;
     line-height: 0.95;
     letter-spacing: -0.2rem;
@@ -43,6 +44,7 @@
 
 @media (max-width: 360px) {
   .lead-header {
+    font-family: Helvetica;
     font-size: 2rem;
     line-height: 0.95;
     letter-spacing: -0.1rem;
@@ -78,6 +80,7 @@
     margin-top: 1rem;
     padding: 0.7rem 1.5rem 0.7rem 1.5rem;
     border-radius: 7px;
+    font-family: Helvetica;
     font-size: 16px;
   }
 }
@@ -87,12 +90,14 @@
     margin-top: 1rem;
     padding: 0.7rem 1rem 0.7rem 1rem;
     border-radius: 7px;
+    font-family: Helvetica;
     font-size: 16px;
   }
 }
 
 .lead-text{
   color: rgba(21, 22, 24, 0.7);
+  font-family: Helvetica;
   font-size: 16px;
   font-weight: 300;
   margin: 8px 0 24px;
@@ -101,6 +106,7 @@
 @media(max-width: 767px) {
   .lead-text {
     color: rgba(21, 22, 24, 0.7);
+    font-family: Helvetica;
     font-size: 14px;
     font-weight: 300;
     margin: 8px 0 24px;
@@ -159,25 +165,24 @@
   }
 }
 
-/*@media (max-width: 767px) {*/
-/*  .leader-position{*/
-/*    position: absolute;*/
-/*    top: 10rem;*/
-/*    left: 18rem;*/
-/*  }*/
-/*}*/
+.button-pills{
+  box-shadow: none;
+  border-width: 0px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: #f5f6f7;
+  font-family: Helvetica;
+  font-size: 14px;
+  text-align: center;
+  justify-items: center;
+}
 
-/*@media (max-width: 360px) {*/
-/*  .leader-position{*/
-/*    order: 2;*/
-/*    position: relative;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*  }*/
-/*}*/
+.button-pills:focus {
+  color: #ffffff;
+  background-color: #0d0e0f;
+}
 
-
-  .my-pill{
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    margin: 0.5rem;
-  }
+.button-pills:active {
+  color: #ffffff;
+  background-color: #0d0e0f;
+}

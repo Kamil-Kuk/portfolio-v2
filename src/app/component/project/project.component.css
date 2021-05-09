@@ -1,0 +1,57 @@
+.card-img-placeholder{
+  width: 18rem;
+  height: 12rem;
+  border-radius: 1rem;
+  background-color: #f5f6f7;
+}
+
+.button-pills-sm{
+  box-shadow: none;
+  border-width: 0px;
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  border-radius: 1rem;
+  background-color: #f5f6f7;
+  font-family: Helvetica;
+  font-size: 12px;
+  text-align: center;
+  justify-items: center;
+}
+
+.button-pills-sm:focus {
+  color: #ffffff;
+  background-color: #0d0e0f;
+}
+
+.button-pills-sm:active {
+  color: #ffffff;
+  background-color: #0d0e0f;
+}
+
+.my-card-text{
+  margin-bottom: 1rem;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(21, 22, 24, 0.7);
+}
+
+.button-preview{
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  background-color: #0d0e0f;
+}
+
+.icon-white{
+  fill: #fff;
+}
+
+.button-github{
+  font-family: Helvetica;
+  font-size: 16px;
+  color: rgba(21, 22, 24, 0.8);
+  padding: 0.7rem;
+  background-color: #ffffff;
+}

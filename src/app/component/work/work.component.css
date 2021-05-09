@@ -1,0 +1,121 @@
+.work-header {
+  margin-top: 9rem;
+  font-family: Helvetica;
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 0.95;
+  letter-spacing: -0.3rem;
+  color: #151618;
+}
+
+
+@media (max-width: 767px) {
+  .work-header {
+    font-size: 2.5rem;
+    line-height: 0.95;
+    letter-spacing: -0.2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .work-header {
+    font-size: 2rem;
+    line-height: 0.95;
+    letter-spacing: -0.1rem;
+  }
+}
+
+.work-text{
+  color: rgba(21, 22, 24, 0.7);
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 8px 0 24px;
+}
+
+.button-pills{
+  box-shadow: none;
+  border-width: 0px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: #f5f6f7;
+  font-family: Helvetica;
+  font-size: 14px;
+  text-align: center;
+  justify-items: center;
+}
+
+.button-pills:focus {
+  color: #ffffff;
+  background-color: #0d0e0f;
+}
+
+.button-pills:active {
+  color: #ffffff;
+  background-color: #0d0e0f;
+}
+
+.card-img-placeholder{
+  width: 18rem;
+  height: 12rem;
+  border-radius: 1rem;
+  background-color: #f5f6f7;
+}
+
+.button-pills-sm{
+  box-shadow: none;
+  border-width: 0px;
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  border-radius: 1rem;
+  background-color: #f5f6f7;
+  font-family: Helvetica;
+  font-size: 12px;
+  text-align: center;
+  justify-items: center;
+}
+
+.button-pills-sm:focus {
+  color: #ffffff;
+  background-color: #0d0e0f;
+}
+
+.button-pills-sm:active {
+  color: #ffffff;
+  background-color: #0d0e0f;
+}
+
+.my-card-text{
+  margin-bottom: 1rem;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(21, 22, 24, 0.7);
+}
+
+.button-preview{
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  background-color: #0d0e0f;
+}
+
+.icon-white{
+  fill: #fff;
+}
+
+.button-github{
+  font-family: Helvetica;
+  font-size: 16px;
+  color: rgba(21, 22, 24, 0.8);
+  padding: 0.7rem;
+  background-color: #ffffff;
+}
+
+.my-card-img{
+  width: 18rem;
+  height: 12rem;
+  border-radius: 1rem;
+}
+
