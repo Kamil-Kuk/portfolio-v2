@@ -9,4 +9,5 @@ export interface Project {
   topics: string[];
   language: string;
   preview_url: string;
+  image_url: string;
 }

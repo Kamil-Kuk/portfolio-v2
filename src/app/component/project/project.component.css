@@ -55,3 +55,9 @@
   padding: 0.7rem;
   background-color: #ffffff;
 }
+
+.my-card-img{
+  width: 18rem;
+  height: 12rem;
+  border-radius: 1rem;
+}
