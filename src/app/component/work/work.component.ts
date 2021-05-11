@@ -17,6 +17,7 @@ export class WorkComponent implements OnInit {
   public showButtons: boolean;
   public hideRepos: number[];
   public projects: Project[] = [];
+  public resultRepos: Project[] = [];
   public numOfAll: number;
 
   constructor(
@@ -49,6 +50,8 @@ export class WorkComponent implements OnInit {
     let project: Project;
     this.hideRepos = HIDDEN.slice(0);
     if (tag === '*') {
+      this.resultRepos = [];
+      this.getRepos();
       return;
     }
     for (let i = 0 ; i < this.projects.length; i++){
@@ -57,7 +60,17 @@ export class WorkComponent implements OnInit {
         this.hideRepos.push(project.id);
       }
     }
+    this.resultRepos = [];
+    this.getRepos();
   }
+
+  public getRepos(): void {
+    for (let project of this.projects){
+      if (!this.hideRepos.includes(project.id)){
+        this.resultRepos.push(project);
+      }
+    }
+}
 
   ngOnInit(): void {
     this.projectService.getProjects().subscribe((projects) => {
@@ -79,6 +92,7 @@ export class WorkComponent implements OnInit {
       this.projects[6].topics = [TAGS[1], TAGS[3], TAGS[5]];
 
       this.numOfAll = this.getNumberOfTags('*');
+      this.getRepos();
     });
   }
 

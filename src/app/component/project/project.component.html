@@ -1,39 +1,46 @@
+<!--<div class="col-12 card m-4 border-0" style="height: 24rem;" (mouseenter)="showButtons=true" (mouseleave)="showButtons=false">-->
+<div class="col">
+  <div class="card border-0" style="max-width: 18rem; height: 24rem;" (mouseenter)="showButtons=true"
+       (mouseleave)="showButtons=false">
+    <div *ngIf="project.image_url!=null; else elseBlock" class="m-0 card-img-top card-img-placeholder">
+      <img src="{{project.image_url}}" class="card-img-top my-card-img" alt="..."></div>
+    <ng-template #elseBlock>
+      <div class="m-0 card-img-top card-img-placeholder"></div>
+    </ng-template>
 
-<div class="card m-4 border-0" style="width: 18rem; height: 24rem;" (mouseenter)="showButtons=true" (mouseleave)="showButtons=false">
-  <div *ngIf="project.image_url!=null; else elseBlock" class="m-0 card-img-top card-img-placeholder">
-    <img src="{{project.image_url}}" class="card-img-top my-card-img" alt="..."></div>
-  <ng-template #elseBlock><div class="m-0 card-img-top card-img-placeholder"></div>
-  </ng-template>
+    <div class="card-body mt-3 p-0">
+      <h5 class="card-title">{{ project.name }}</h5>
 
-  <div class="card-body mt-3 p-0">
-    <h5 class="card-title">{{ project.name }}</h5>
-
-    <button type="button" class="btn button-pills-sm mb-2 mr-1">{{project.language}}</button>
-    <div *ngFor="let topic of project.topics" class="d-inline">
-      <div *ngIf="topic.toLowerCase()!=project.language.toLowerCase()" class="d-inline">
-        <button type="button" class="btn button-pills-sm mb-2 ml-1 mr-1">{{topic}}</button>
+      <button type="button" class="btn button-pills-sm mb-2 mr-1">{{project.language}}</button>
+      <div *ngFor="let topic of project.topics" class="d-inline">
+        <div *ngIf="topic.toLowerCase()!=project.language.toLowerCase()" class="d-inline">
+          <button type="button" class="btn button-pills-sm mb-2 ml-1 mr-1">{{topic}}</button>
+        </div>
       </div>
-    </div>
 
-    <p class="my-card-text">{{ project.description }}</p>
+      <p class="my-card-text">{{ project.description }}</p>
 
-    <div *ngIf="showButtons" class="row pl-3 pr-3">
-      <div *ngIf="project.preview_url!=null" class="col-6 p-0">
+      <div *ngIf="showButtons" class="row pl-3 pr-3">
+        <div *ngIf="project.preview_url!=null" class="col-6 p-0">
           <a class="btn button-preview" href="{{ project.preview_url}}" role="button" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye mr-1" viewBox="0 0 16 16">
-            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
-            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-          </svg>
-          Preview</a>
-      </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye mr-1"
+                 viewBox="0 0 16 16">
+              <path
+                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+              <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+            </svg>
+            Preview</a>
+        </div>
 
-      <div class="col-6 p-0">
+        <div class="col-6 p-0">
           <a class="btn button-github" href="{{ project.html_url }}" role="button" target="_blank">
-          <a class="mr-1 icon-white" href="{{ project.html_url }}"><img src="assets/resources/github_icon.svg" alt="GIT"></a>
-          Github repo</a>
+            <a class="mr-1 icon-white" href="{{ project.html_url }}"><img src="assets/resources/github_icon.svg"
+                                                                          alt="GIT"></a>
+            Github repo</a>
+        </div>
       </div>
+
+
     </div>
-
-
   </div>
 </div>
