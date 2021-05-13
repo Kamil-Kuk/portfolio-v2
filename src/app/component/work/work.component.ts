@@ -19,6 +19,7 @@ export class WorkComponent implements OnInit {
   public projects: Project[] = [];
   public resultRepos: Project[] = [];
   public numOfAll: number;
+  public carouselActiveProject: Project;
 
   constructor(
     private projectService: ProjectService
@@ -50,7 +51,6 @@ export class WorkComponent implements OnInit {
     let project: Project;
     this.hideRepos = HIDDEN.slice(0);
     if (tag === '*') {
-      this.resultRepos = [];
       this.getRepos();
       return;
     }
@@ -60,16 +60,17 @@ export class WorkComponent implements OnInit {
         this.hideRepos.push(project.id);
       }
     }
-    this.resultRepos = [];
     this.getRepos();
   }
 
   public getRepos(): void {
+    this.resultRepos = [];
     for (let project of this.projects){
       if (!this.hideRepos.includes(project.id)){
         this.resultRepos.push(project);
       }
     }
+    this.carouselActiveProject = this.resultRepos[0];
 }
 
   ngOnInit(): void {
@@ -93,6 +94,7 @@ export class WorkComponent implements OnInit {
 
       this.numOfAll = this.getNumberOfTags('*');
       this.getRepos();
+      this.carouselActiveProject = this.resultRepos[0];
     });
   }
 

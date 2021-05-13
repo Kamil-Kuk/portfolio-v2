@@ -32,7 +32,7 @@
             Preview</a>
         </div>
 
-        <div class="col-6 p-0">
+        <div *ngIf="project.html_url!=null" class="col-6 p-0">
           <a class="btn button-github" href="{{ project.html_url }}" role="button" target="_blank">
             <a class="mr-1 icon-white" href="{{ project.html_url }}"><img src="assets/resources/github_icon.svg"
                                                                           alt="GIT"></a>

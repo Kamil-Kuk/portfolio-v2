@@ -10,21 +10,72 @@
       If you have any questions feel free to ask me for more information.
     </div>
   </div>
-  <div class="row justify-content-center">
-    <button type="button" class="btn button-pills m-1 pl-4 pr-4 active" aria-pressed="true" (click)="showByTag('*')">All ({{numOfAll}})</button>
-    <button type="button" class="btn button-pills m-1" (click)="showByTag('Java')">Java ({{getNumberOfTags('Java')}})</button>
-    <button type="button" class="btn button-pills m-1" (click)="showByTag('Spring')">Spring ({{getNumberOfTags('Spring')}})</button>
-    <button type="button" class="btn button-pills m-1" (click)="showByTag('Hibernate')">Hibernate ({{getNumberOfTags('Hibernate')}})</button>
-    <button type="button" class="btn button-pills m-1" (click)="showByTag('SQL')">SQL ({{getNumberOfTags('SQL')}})</button>
-    <button type="button" class="btn button-pills m-1" (click)="showByTag('JavaScript')">JavaScript ({{getNumberOfTags('JavaScript')}})</button>
-    <button type="button" class="btn button-pills m-1" (click)="showByTag('HTML&CSS')">HTML&CSS ({{getNumberOfTags('HTML&CSS')}})</button>
-    <button type="button" class="btn button-pills m-1" (click)="showByTag('Angular')">Angular ({{getNumberOfTags('Angular')}})</button>
-    <button type="button" class="btn button-pills m-1" (click)="showByTag('Python')">Python ({{getNumberOfTags('Python')}})</button>
+  <div class="d-none d-md-flex row justify-content-center">
+    <button type="button" class="btn button-pills m-1 pl-4 pr-4 active" aria-pressed="true" (click)="showByTag('*')">All
+      ({{numOfAll}})
+    </button>
+    <button type="button" class="btn button-pills m-1" (click)="showByTag('Java')">Java ({{getNumberOfTags('Java')}})
+    </button>
+    <button type="button" class="btn button-pills m-1" (click)="showByTag('Spring')">Spring
+      ({{getNumberOfTags('Spring')}})
+    </button>
+    <button type="button" class="btn button-pills m-1" (click)="showByTag('Hibernate')">Hibernate
+      ({{getNumberOfTags('Hibernate')}})
+    </button>
+    <button type="button" class="btn button-pills m-1" (click)="showByTag('SQL')">SQL ({{getNumberOfTags('SQL')}})
+    </button>
+    <button type="button" class="btn button-pills m-1" (click)="showByTag('JavaScript')">JavaScript
+      ({{getNumberOfTags('JavaScript')}})
+    </button>
+    <button type="button" class="btn button-pills m-1" (click)="showByTag('HTML&CSS')">HTML&CSS
+      ({{getNumberOfTags('HTML&CSS')}})
+    </button>
+    <button type="button" class="btn button-pills m-1" (click)="showByTag('Angular')">Angular
+      ({{getNumberOfTags('Angular')}})
+    </button>
+    <button type="button" class="btn button-pills m-1" (click)="showByTag('Python')">Python
+      ({{getNumberOfTags('Python')}})
+    </button>
   </div>
 
-  <div class="row row-cols-2 row-cols-lg-3 g-4 mt-4 ml-0 mr-0">
+  <div class="d-none d-md-flex row row-cols-2 row-cols-lg-3 g-4 mt-4 ml-0 mr-0">
     <div *ngFor="let project of resultRepos">
-        <app-project [project]="project"></app-project>
+      <app-project [project]="project"></app-project>
     </div>
   </div>
+</div>
+
+
+<div id="carouselRepos" class="d-md-none carousel slide mt-4 my-carousel-margins" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row justify-content-center">
+          <app-project [project]="carouselActiveProject"></app-project>
+        </div>
+      </div>
+    </div>
+
+    <ng-container *ngFor="let project of resultRepos">
+      <ng-container *ngIf="resultRepos.indexOf(project)!=0 && !hideRepos.includes(project.id)">
+      <div class="carousel-item">
+        <div class="container">
+          <div class="row justify-content-center">
+              <app-project [project]="project"></app-project>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+
+  </div>
+
+  <a class="carousel-control-prev" href="#carouselRepos" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselRepos" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
