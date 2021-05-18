@@ -6,13 +6,17 @@ import { HomeComponent } from './component/home/home.component';
 import { WorkComponent } from './component/work/work.component';
 import { ProjectComponent } from './component/project/project.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ResumeComponent } from './component/resume/resume.component';
+import { ContactComponent } from './component/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     WorkComponent,
-    ProjectComponent
+    ProjectComponent,
+    ResumeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

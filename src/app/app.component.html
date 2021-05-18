@@ -1,18 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <script src="https://kit.fontawesome.com/514de43444.js" crossorigin="anonymous"></script>
 </head>
 <body class="app__background">
 
 <nav class="navbar navbar-expand-md navbar-light my-navbar">
   <div class="container-fluid p-0">
-      <a class="navbar-brand" href="#">
-        <img src="assets/resources/KK_logo.svg" alt="KK">
-      </a>
+    <a class="navbar-brand" href="#home">
+      <img src="assets/resources/KK_logo.svg" alt="KK">
+    </a>
 
     <button class="navbar-toggler collapsed border-0"
             type="button"
@@ -23,61 +21,78 @@
             aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       <div class="close-icon py-1">
-        <a class="p-2" href="#"><img src="assets/resources/x.svg" alt="X"></a>
+        <a class="p-2" href="#"><img src="assets/resources/x.svg" style="width: 24px; height: 24px" alt="X"></a>
       </div>
     </button>
 
     <div class="collapse navbar-collapse p-0" id="myNavbar">
       <div class="row col-12 p-0">
         <div class="col-10 p-0">
-        <ul class="navbar-nav mt-2 justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link my-nav-text" href="#">Work<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link my-nav-text" href="#">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link my-nav-text" href="#">Contact</a>
-          </li>
-          <li class="nav-item d-md-none pt-3">
-            <div class="d-inline">
+          <ul class="navbar-nav mt-2 justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link my-nav-text" href="#work">Work<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link my-nav-text" href="#resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link my-nav-text" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item d-md-none pt-3">
+              <div class="d-inline">
                 <a class="p-1 my-nav-text-small active" href="#">ENG</a>
                 <a class="pr-3 p-1  my-nav-text-small" href="#">POL</a>
-                <a class="pl-3 p-1" href="#"><img src="assets/resources/github_icon.svg" alt="GIT"></a>
-                <a class="p-1" href="#"><img src="assets/resources/linkedin_icon.svg" alt="IN"></a>
-            </div>
-          </li>
-        </ul>
-        </div>
-
-          <ul class="navbar-nav col-2 justify-content-md-end d-none d-md-flex ml-md-auto p-0">
-            <li>
-              <a class="pr-1 my-nav-text-small active align-middle" href="#">ENG</a>
-            </li>
-            <li>
-              <a class="pr-3 pl-1  my-nav-text-small align-middle" href="#">POL</a>
-            </li>
-            <li>
-              <a class="pl-3 pr-1" href="#"><img src="assets/resources/github_icon.svg" alt="GIT"></a>
-            </li>
-            <li>
-              <a class="pl-1" href="#"><img src="assets/resources/linkedin_icon.svg" alt="IN"></a>
+                <a class="pl-3 p-1" href="https://github.com/Kamil-Kuk" target="_blank"><img
+                  src="assets/resources/github_icon.svg" alt="GIT"></a>
+                <a class="p-1" href="https://www.linkedin.com/in/kamil-kukowski-sopot" target="_blank"><img
+                  src="assets/resources/linkedin_icon.svg" alt="IN"></a>
+              </div>
             </li>
           </ul>
+        </div>
 
+        <ul class="navbar-nav col-2 justify-content-md-end d-none d-md-flex ml-md-auto p-0">
+          <li>
+            <a class="pr-1 my-nav-text-small active align-middle" href="#">ENG</a>
+          </li>
+          <li>
+            <a class="pr-3 pl-1  my-nav-text-small align-middle" href="#">POL</a>
+          </li>
+          <li>
+            <a class="pl-3 pr-1" href="https://github.com/Kamil-Kuk" target="_blank"><img
+              src="assets/resources/github_icon.svg" alt="GIT"></a>
+          </li>
+          <li>
+            <a class="pl-1" href="https://www.linkedin.com/in/kamil-kukowski-sopot" target="_blank"><img
+              src="assets/resources/linkedin_icon.svg" alt="IN"></a>
+          </li>
+        </ul>
       </div>
-
-
-
     </div>
   </div>
 </nav>
 
 
-<app-home></app-home>
-<app-work></app-work>
+<app-home id="home"></app-home>
+<app-work id="work"></app-work>
+<app-resume id="resume"></app-resume>
+<app-contact id="contact"></app-contact>
 
+<footer>
+  <div class="row">
+    <div class="col-12 footer mt-5">
+      <div class="row">
+        <div class="col-1 p-0">
+          <img src="assets/resources/KK_logo.svg" alt="KK">
+        </div>
+        <div class="col-11 text-right p-0 footer-text">
+          Website by
+          <span class="footer-text-bold">Kamil Kukowski</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

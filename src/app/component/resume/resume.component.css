@@ -1,0 +1,92 @@
+.resume-header {
+  position: relative;
+  margin-top: 9rem;
+  font-family: Helvetica;
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 0.95;
+  letter-spacing: -0.3rem;
+  color: #151618;
+  z-index: 100;
+}
+
+
+@media (max-width: 767px) {
+  .resume-header {
+    position: relative;
+    font-size: 2.5rem;
+    line-height: 0.95;
+    letter-spacing: -0.2rem;
+    color: #151618;
+    z-index: 100;
+
+  }
+}
+
+@media (max-width: 360px) {
+  .resume-header {
+    position: relative;
+    font-size: 2rem;
+    line-height: 0.95;
+    letter-spacing: -0.1rem;
+    color: #151618;
+    z-index: 100;
+
+  }
+}
+
+.resume-text{
+  color: rgba(21, 22, 24, 0.7);
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 8px 0 24px;
+}
+
+.resume-header-small{
+  padding: 0;
+  font-family: Helvetica;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #0d0e0f;
+}
+
+.resume-text-small{
+  font-family: Helvetica;
+  font-size: 14px;
+  color: #151618;
+}
+
+.resume-text-small-title{
+  margin-top: 2rem;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0d0e0f;
+}
+
+.resume-text-small-footer{
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  color: rgba(21, 22, 24, 0.8);
+}
+
+.resume-button{
+  padding: 0.7rem 2rem 0.7rem 2.2rem;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Helvetica;
+  background-color: #0d0e0f;
+  color: #ffffff;
+}
+
+.sticker-resume{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}

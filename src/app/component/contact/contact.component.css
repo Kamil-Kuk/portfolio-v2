@@ -1,0 +1,85 @@
+.sticker-contact{
+  position: absolute;
+  top: 92%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.contact-header {
+  position: relative;
+  margin-top: 14rem;
+  font-family: Helvetica;
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 0.95;
+  letter-spacing: -0.3rem;
+  color: #151618;
+  z-index: 100;
+}
+
+
+@media (max-width: 767px) {
+  .contact-header {
+    position: relative;
+    margin-top: 10rem;
+    font-size: 2.5rem;
+    line-height: 0.95;
+    letter-spacing: -0.2rem;
+    color: #151618;
+    z-index: 100;
+
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-header {
+    position: relative;
+    margin-top: 6rem;
+    font-size: 2rem;
+    line-height: 0.95;
+    letter-spacing: -0.1rem;
+    color: #151618;
+    z-index: 100;
+
+  }
+}
+
+.contact-header-small{
+  font-family: Helvetica;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #0d0e0f;
+}
+
+.contact-text-mail{
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(21, 22, 24, 0.9);
+}
+
+.contact-text-mail:hover{
+  text-decoration: none;
+}
+
+.contact-text-social{
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(21, 22, 24, 0.9);
+}
+
+.contact-text-social:hover {
+  text-decoration: none;
+}
+
+.contact-text{
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(21, 22, 24, 0.7);
+}
+
+
