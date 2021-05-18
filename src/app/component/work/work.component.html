@@ -38,14 +38,21 @@
     </button>
   </div>
 
-  <div class="d-none d-md-flex row row-cols-2 row-cols-lg-3 g-4 mt-4 ml-0 mr-0">
+<!--  grid-->
+  <div class="d-none d-md-flex row row-cols-2 row-cols-lg-3 g-4 mt-4 ml-0 mr-0" [ngClass]="{'limitRowNum': isHidden}">
     <div *ngFor="let project of resultRepos">
       <app-project [project]="project"></app-project>
     </div>
   </div>
+
+  <div *ngIf="resultRepos.length>6 && isHidden">
+    <div class="d-none d-md-flex row col-12 mt-5 justify-content-center">
+      <button (click)="showMore()" class="btn button-show-more">Show more ({{resultRepos.length-6}})</button>
+    </div>
+  </div>
 </div>
 
-
+<!--carousel-->
 <div id="carouselRepos" class="d-md-none carousel slide mt-4 my-carousel-margins" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">

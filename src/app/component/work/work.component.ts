@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Project} from '../../model/project.model';
 import {ProjectService} from '../../service/project.service';
-import {Observable} from 'rxjs';
-import {environment} from '../../../environments/environment';
 
 const TAGS = ['Java', 'Spring', 'Hibernate', 'SQL', 'JavaScript', 'HTML&CSS', 'Angular', 'Python'];
 const HIDDEN = [334614549];
@@ -15,6 +13,7 @@ const HIDDEN = [334614549];
 
 export class WorkComponent implements OnInit {
   public showButtons: boolean;
+  public isHidden: boolean;
   public hideRepos: number[];
   public projects: Project[] = [];
   public resultRepos: Project[] = [];
@@ -24,9 +23,9 @@ export class WorkComponent implements OnInit {
   constructor(
     private projectService: ProjectService
   ) {
-    // this.manualRepos = [332283097, 352052234, 334614549, 363749408, 320807663];
     this.hideRepos = HIDDEN.slice(0);
     this.showButtons = false;
+    this.isHidden = true;
   }
 
   public getNumberOfTags(tag: string): number{
@@ -52,6 +51,7 @@ export class WorkComponent implements OnInit {
     this.hideRepos = HIDDEN.slice(0);
     if (tag === '*') {
       this.getRepos();
+      this.isHidden = true;
       return;
     }
     for (let i = 0 ; i < this.projects.length; i++){
@@ -61,6 +61,7 @@ export class WorkComponent implements OnInit {
       }
     }
     this.getRepos();
+    this.isHidden = true;
   }
 
   public getRepos(): void {
@@ -72,6 +73,10 @@ export class WorkComponent implements OnInit {
     }
     this.carouselActiveProject = this.resultRepos[0];
 }
+
+  public showMore(): void{
+    this.isHidden = !this.isHidden;
+  }
 
   ngOnInit(): void {
     this.projectService.getProjects().subscribe((projects) => {
