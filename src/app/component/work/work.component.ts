@@ -87,6 +87,7 @@ export class WorkComponent implements OnInit {
       this.projects[3].image_url = 'assets/resources/recipes.jpg';
 
       this.projects[1].preview_url = 'https://kamil-kuk-calc-app.netlify.app';
+      this.projects[5].preview_url = 'https://kamil-kukowski-java-dev.netlify.app';
 
       this.projects[5].language = TAGS[5];
 
