@@ -30,6 +30,7 @@
 
 .my-navbar {
   padding: 0rem 0rem 0rem 1.5rem;
+  background-color: #ffffff;
 }
 
 @media (max-width: 360px) {
