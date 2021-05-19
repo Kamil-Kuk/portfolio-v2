@@ -81,4 +81,13 @@
   color: #151618;
 }
 
+.language-button{
+  padding: 0 0.25rem;
+  border-width: 0;
+  font-family: Helvetica;
+  font-size: 14px;
+  text-align: center;
+  color: #0d0e0f;
+}
+
 

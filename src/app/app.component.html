@@ -30,18 +30,18 @@
         <div class="col-10 p-0">
           <ul class="navbar-nav mt-2 justify-content-center">
             <li class="nav-item">
-              <a class="nav-link my-nav-text" href="#work">Work<span class="sr-only">(current)</span></a>
+              <a class="nav-link my-nav-text" href="#work" translate>Work<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link my-nav-text" href="#resume">Resume</a>
+              <a class="nav-link my-nav-text" href="#resume" translate>Resume</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link my-nav-text" href="#contact">Contact</a>
+              <a class="nav-link my-nav-text" href="#contact" translate>Contact</a>
             </li>
             <li class="nav-item d-md-none pt-3">
               <div class="d-inline">
-                <a class="p-1 my-nav-text-small active" style="opacity: 0" href="#">ENG</a>
-                <a class="pr-3 p-1  my-nav-text-small" style="opacity: 0" href="#">POL</a>
+                <a type="button" class="p-1 my-nav-text-small active" (click)="changeLangEng()">ENG</a>
+                <a type="button" class="pr-3 p-1  my-nav-text-small" (click)="changeLangPol()">POL</a>
                 <a class="pl-3 p-1" href="https://github.com/Kamil-Kuk" target="_blank"><img
                   src="assets/resources/github_icon.svg" alt="GIT"></a>
                 <a class="p-1" href="https://www.linkedin.com/in/kamil-kukowski-sopot" target="_blank"><img
@@ -53,10 +53,11 @@
 
         <ul class="navbar-nav col-2 justify-content-md-end d-none d-md-flex ml-md-auto p-0">
           <li>
-            <a class="pr-1 my-nav-text-small active align-middle" style="opacity: 0" href="#">ENG</a>
+            <a type="button" class="pr-1 my-nav-text-small active align-middle" (click)="changeLangEng()">ENG</a>
+
           </li>
           <li>
-            <a class="pr-3 pl-1  my-nav-text-small align-middle" style="opacity: 0" href="#">POL</a>
+            <a type="button" class="pr-3 pl-1  my-nav-text-small align-middle" (click)="changeLangPol()">POL</a>
           </li>
           <li>
             <a class="pl-3 pr-1" href="https://github.com/Kamil-Kuk" target="_blank"><img
@@ -71,7 +72,6 @@
     </div>
   </div>
 </nav>
-
 
 <app-home id="home"></app-home>
 <app-work id="work"></app-work>
