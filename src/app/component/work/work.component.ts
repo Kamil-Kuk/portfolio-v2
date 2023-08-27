@@ -86,11 +86,11 @@ export class WorkComponent implements OnInit {
       this.projects[2].image_url = 'assets/resources/covid.png';
       this.projects[3].image_url = 'assets/resources/recipes.jpg';
 
-      for (let i = 0; i < this.projects.length; i++) {
-        if (!this.project[i].image_url) {
-          this.projects[3].image_url = 'assets/resources/KK_logo.svg';
-        }
-      }
+//       for (let i = 0; i < this.projects.length; i++) {
+//         if (!this.project[i].image_url) {
+//           this.projects[3].image_url = 'assets/resources/KK_logo.svg';
+//         }
+//       }
 
       this.projects[1].preview_url = 'https://kamil-kuk-calc-app.netlify.app';
       this.projects[5].preview_url = 'https://kamil-kukowski-java-dev.netlify.app';
