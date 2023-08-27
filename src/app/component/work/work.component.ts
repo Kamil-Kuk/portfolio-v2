@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Project} from '../../model/project.model';
 import {ProjectService} from '../../service/project.service';
 
-const TAGS = ['Java', 'Spring', 'Hibernate', 'SQL', 'JavaScript', 'HTML&CSS', 'Angular', 'Python'];
+const TAGS = ['Java', 'Spring', 'SQL', 'JavaScript', 'HTML&CSS', 'Angular', 'Python'];
 const HIDDEN = [334614549];
 
 @Component({
@@ -86,17 +86,23 @@ export class WorkComponent implements OnInit {
       this.projects[2].image_url = 'assets/resources/covid.png';
       this.projects[3].image_url = 'assets/resources/recipes.jpg';
 
+      for (let i = 0; i < this.projects.length; i++) {
+        if (!this.projects[i].image_url) {
+          this.projects[i].image_url = 'assets/resources/logo.png';
+        }
+      }
+
       this.projects[1].preview_url = 'https://kamil-kuk-calc-app.netlify.app';
       this.projects[5].preview_url = 'https://kamil-kukowski-java-dev.netlify.app';
 
-      this.projects[5].language = TAGS[5];
+      this.projects[5].language = TAGS[4];
 
-      this.projects[0].topics = [TAGS[7]];
-      this.projects[1].topics = [TAGS[5], TAGS[6]];
-      this.projects[2].topics = [TAGS[2], TAGS[3], 'JavaFX'];
-      this.projects[3].topics = [TAGS[1], TAGS[3], TAGS[5]];
-      this.projects[5].topics = [TAGS[5], TAGS[4], TAGS[6]];
-      this.projects[6].topics = [TAGS[1], TAGS[3], TAGS[5]];
+      this.projects[0].topics = [TAGS[6]];
+      this.projects[1].topics = [TAGS[4], TAGS[5]];
+      this.projects[2].topics = [TAGS[2], 'JavaFX'];
+      this.projects[3].topics = [TAGS[1], TAGS[2], TAGS[4]];
+      this.projects[5].topics = [TAGS[4], TAGS[3], TAGS[5]];
+      this.projects[6].topics = [TAGS[1], TAGS[2], TAGS[4]];
 
       this.numOfAll = this.getNumberOfTags('*');
       this.getRepos();
