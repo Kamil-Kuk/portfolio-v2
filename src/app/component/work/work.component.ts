@@ -87,7 +87,7 @@ export class WorkComponent implements OnInit {
       this.projects[3].image_url = 'assets/resources/recipes.jpg';
 
       for (let i = 0; i < this.projects.length; i++) {
-        if (!this.project[i].image_url) {
+        if (!this.projects[i].image_url) {
           this.projects[i].image_url = 'assets/resources/logo.png';
         }
       }
